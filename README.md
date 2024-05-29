@@ -173,8 +173,25 @@ ride_based_on_month <- merged_bike_data %>%
 View(ride_based_on_month)
 
 ```
+* Total riders, total duration based on different types of bike
+```r
+ridable_bike_type <- merged_bike_data %>% 
+  group_by(member_casual,rideable_type) %>% 
+  summarize(Number_of_riders=n_distinct(ride_id),total_duration= sum(duration_minutes),
+            average_duration=mean(duration_minutes))
+View(ridable_bike_type)
 
+```
+* Top 5 popular start stations
 
+```r
+start_stations <- merged_bike_data %>%
+  group_by(start_station_name,member_casual,ride_id) %>%
+  summarise(total_rides = n())
+  
+view(start_stations)
+
+```
 
 
 
