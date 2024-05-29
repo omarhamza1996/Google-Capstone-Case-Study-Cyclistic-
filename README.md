@@ -31,7 +31,19 @@ The data used for this analysis consists of Cyclistic's historical bike trip dat
 *  Download and load data: Since I need to use the previous 12 months of data seta, I am going to use data from May 2023 till April 2024. I am going to download and look into the data set and find out which data I will be using and which not.
 * Data cleaning: First I have created a column which will show the day name which later will be usefull for analyzing. I order to do that I have used =Text(D2,”dddd”) formula and where C2 is the started_at column.
 
-  ![Adding day in excel]()
+  ![Adding day in excel](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/day.png)
+
+In the same way, I have created another column named Month and sorted out the months of each cell.
+  ![Adding day month excel](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/month.png)
+
+Later I need to find the duration in minutes between the starting date and time and the ending date and time of the ride. To find it I used =(E2-C2)*1440 which finds the difference between end time and start time and by multiplying with 1440 by which I were able to find exact minutes.
+
+![Adding time duration excel] (https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/minutes.png)
+
+I did it to all 12 months of the dataset. To get a clean data I removed start_station_id,end_station_id,start_lat, and end_lat which will not be needed for my calculation.
+The only thing left to clean the data properly is to remove the data row which has missing values.
+So I moved all the data to R studio where I will conduct the rest of the analyzing process.
+I loaded all the data in R and call out tidyverse and dplyr,readr and skimr pacakage for merging and analyzing.
 
 
 
