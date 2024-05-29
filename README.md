@@ -27,6 +27,14 @@ Description of Data Sources:
 The data used for this analysis consists of Cyclistic's historical bike trip data over the last 12 months. This public dataset includes information about individual rides such as start time, end time, duration, starting station, ending station, and rider type (casual or member). The data is provided by Motivate International Inc. under a public [license](https://divvybikes.com/data-license-agreement).
 
 
+# Process
+*  Download and load data: Since I need to use the previous 12 months of data seta, I am going to use data from May 2023 till April 2024. I am going to download and look into the data set and find out which data I will be using and which not.
+* Data cleaning: First I have created a column which will show the day name which later will be usefull for analyzing. I order to do that I have used =Text(D2,”dddd”) formula and where C2 is the started_at column.
+
+  ![Adding day in excel]()
+
+
+
 
 
 
