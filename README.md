@@ -1,4 +1,4 @@
-# Google-Capstone-Case-Study-Cyclistic-
+# Google-Capstone-Case-Study-Cyclistic bikw-share 
 Google Data Analytics Capstone Project: Case study: How does a bike-share navigate speedy success?
 Case Study: How does a bike-share navigate speedy success?
 Author: Omar Hamza.
