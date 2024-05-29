@@ -357,7 +357,3 @@ Based on the observations and findings the recommendations are:
 
 
 
-
-```r
-
-```
