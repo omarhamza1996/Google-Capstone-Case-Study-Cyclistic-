@@ -330,6 +330,10 @@ Based on the observations and findings the recommendations are:
 * Promotional activities should be high in Streeter Dr & Grand Ave,DuSable Lake Shore Dr & Monroe St,Michigan Ave & Oak St,DuSable Lake Shore Dr & North Blvd,Kingsbury St & Kinzie St should be increased as they are the hottest spot for riders to start their ride.
 
 
+### Reference
+* https://googledataanalytics.wordpress.com/how-does-a-bike-share-navigate-speedy-success/
+
+
 #### Thank you so much for taking the time to read it. Your feedack would be much appreciated.
 
 
