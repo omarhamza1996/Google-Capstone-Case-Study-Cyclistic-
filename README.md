@@ -217,6 +217,7 @@ ggplot(total_ride, aes(x = "", y = ride, fill = member_casual)) +
   theme_void()
 
 ```
+ ![Pie chart](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/Pie%20chart.jpeg)
 
 *  Bar diagram showing number of riders based on month
 
@@ -228,6 +229,8 @@ ggplot(ride_based_on_month, aes(x = month, y = total_riders, fill = member_casua
   scale_y_continuous(labels = comma) +
   theme_minimal()
 ```
+![Number of riders by month](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/total_ride%20based%20on%20month.jpeg)
+
 * Bar diagram showing average ride duration based on month
 ```r
 ggplot(ride_based_on_month, aes(x = month, y = average_duration, fill = member_casual)) +
@@ -237,6 +240,8 @@ ggplot(ride_based_on_month, aes(x = month, y = average_duration, fill = member_c
   scale_y_continuous(labels = comma) +
   theme_minimal()
 ```
+![average duration](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/Average%20duration%20based%20on%20months.jpeg)
+
 * •	Bar diagram showing the number of riders based on weekdays.
 
 ```r
@@ -250,8 +255,9 @@ ggplot(ride_based_on_week, aes(x = start_day, y = total_riders, fill = member_ca
   scale_y_continuous(labels = comma) +
   theme_minimal()
 ```
+![Bar diagram](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/total%20ride%20based%20on%20days.jpeg)
 
-* Bar diagram showing average ride duration based. Bar diagram showing the total number of riders based on different bikes.
+* Bar diagram showing average ride duration based on days
 ```r
 #4 average duration based on days
 
@@ -263,6 +269,8 @@ ggplot(ride_based_on_week, aes(x = start_day, y = average_duration, fill = membe
   theme_minimal()
 
 ```
+![Bar diagram](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/average%20duration%20ased%20on%20days.jpeg)
+
 * Bar diagram showing the total number of riders based on different bikes.
 
 ```r
@@ -274,11 +282,71 @@ ggplot(ride_based_on_week, aes(x = start_day, y = total_riders, fill = member_ca
   theme_minimal()
 
 ```
-
+![Bar diagram](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/rides%20based%20on%20different%20type%20of%20bike.jpeg)
 
 # Share
 
 After analyzing the data, I am going to share the insights which I have found during the analysis. The chart was generated in Microsoft Excel.
+
+* Average ride duration in minutes between members and casual riders.
+
+![Bar diagram](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Average%20duration%20based%20on%20members%20and%20casual.png)
+
+
+* Total number of riders 
+
+![Pie Chart](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/total%20rides%20based%20on%20member%20and%20casuals.png)
+
+* Total ride duration.
+![Ride duration](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Total%20ride%20duration.png)
+
+* Number of riders using different types of bikes.
+![bar](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Different%20bike%20type.png)
+
+* Total number of riders based on months
+![bar](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Riders%20ride%20based%20on%20month.png)
+
+* 	Average ride duration based on months
+
+![bar](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Average%20riding%20time%20based%20on%20month.png)
+
+* Total number of riders based on days of the week over 12 months
+![bar](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Riders%20ride%20based%20on%20days.png)
+
+* Top 5 popular stations
+![bar](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Data%20Visualisation/Top%205%20stations.png)
+
+# Findings
+Based on the report and the diagrams my key findings are:
+* The company’s 35% of the users are casual riders but their duration is 188% higher than members which will be a very profitable decision by converting them into members.
+* Most of the casual riders use bike-share during weekends which indicates they tend to use it for leisure.
+* The usage of casual riders is higher from June to August due to warm weather.
+*	Causal riders often use docked bikes compared to members who do not use them.
+# Act
+Based on the observations and findings the recommendations are:
+* Marketing such as social marketing, advertisement should start in early May because the of casual riders using bike-share increases from that time and it would create a brand image early of peak usage.
+* The price of per-minute usage should be increased slightly for casual riders during summer so that they would be attracted to purchase memberships.
+* Discounts and promotional offers should be implied such as the first 30 minutes being free if casual riders switch to members.
+* Promotional activities should be high in Streeter Dr & Grand Ave,DuSable Lake Shore Dr & Monroe St,Michigan Ave & Oak St,DuSable Lake Shore Dr & North Blvd,Kingsbury St & Kinzie St should be increased as they are the hottest spot for riders to start their ride.
+
+
+#### Thank you so much for taking the time to read it. Your feedack would be much appreciated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
