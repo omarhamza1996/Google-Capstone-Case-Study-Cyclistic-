@@ -192,6 +192,66 @@ start_stations <- merged_bike_data %>%
 view(start_stations)
 
 ```
+Visualization
+For visualization in R, I used the Ggplot2 package and called the library
+
+
+```r
+library(ggplot2)
+library(scales)
+
+```
+* Pie chart for the total of rides based on member or casual riders.
+
+```r
+#Pie chart showing the difference between total riders
+
+
+ggplot(total_ride, aes(x = "", y = total_rides, fill = member_casual)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = total_rides), 
+            position = position_stack(vjust = 0.5)) +
+  labs(title = "Rides by Member Type",
+       fill = "Rider Type") +
+  theme_void()
+
+```
+
+*  Bar diagram showing number of riders based on month
+
+```r
+ggplot(ride_based_on_month, aes(x = month, y = total_riders, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "       Total Rides based on months",x = "Month",y = "Total Rides",
+       fill = "Rider Type") +
+  scale_y_continuous(labels = comma) +
+  theme_minimal()
+```
+* Bar diagram showing average ride duration based on month
+```r
+ggplot(ride_based_on_month, aes(x = month, y = average_duration, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "       Average duration riders ride based on months",x = "Month",y = "Minutes",
+       fill = "Rider Type") +
+  scale_y_continuous(labels = comma) +
+  theme_minimal()
+```
+
+```r
+
+```
+
+```r
+
+```
+
+
+
+
+
+
+
 
 
 
@@ -199,8 +259,4 @@ view(start_stations)
 
 ```r
 
-
 ```
-
-
-
