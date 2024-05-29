@@ -207,7 +207,7 @@ library(scales)
 #Pie chart showing the difference between total riders
 
 
-ggplot(total_ride, aes(x = "", y = total_rides, fill = member_casual)) +
+ggplot(total_ride, aes(x = "", y = ride, fill = member_casual)) +
   geom_bar(stat = "identity", width = 1) +
   coord_polar(theta = "y") +
   geom_text(aes(label = total_rides), 
@@ -237,15 +237,48 @@ ggplot(ride_based_on_month, aes(x = month, y = average_duration, fill = member_c
   scale_y_continuous(labels = comma) +
   theme_minimal()
 ```
+* •	Bar diagram showing the number of riders based on weekdays.
 
 ```r
+#3 total rides based on days
+
+
+ggplot(ride_based_on_week, aes(x = start_day, y = total_riders, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "       Total Rides based on days",x = "Day",y = "Total Rides",
+       fill = "Rider Type") +
+  scale_y_continuous(labels = comma) +
+  theme_minimal()
+```
+
+* Bar diagram showing average ride duration based. Bar diagram showing the total number of riders based on different bikes.
+```r
+#4 average duration based on days
+
+ggplot(ride_based_on_week, aes(x = start_day, y = average_duration, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "       Average duration riders ride based on days",x = "Day",y = "Minutes",
+       fill = "Rider Type") +
+  scale_y_continuous(labels = comma) +
+  theme_minimal()
+
+```
+* Bar diagram showing the total number of riders based on different bikes.
+
+```r
+ggplot(ride_based_on_week, aes(x = start_day, y = total_riders, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "       Total Rides based on days",x = "Day",y = "Total Rides",
+       fill = "Rider Type") +
+  scale_y_continuous(labels = comma) +
+  theme_minimal()
 
 ```
 
-```r
 
-```
+# Share
 
+After analyzing the data, I am going to share the insights which I have found during the analysis. The chart was generated in Microsoft Excel.
 
 
 
