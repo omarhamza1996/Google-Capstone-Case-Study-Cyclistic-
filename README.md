@@ -67,6 +67,114 @@ May23 <- read_csv("Case Study/Excel file for cleaning/May23.csv")
 
 ```
 
+After that  cloname() and str() functins were used to look at the data and type
+
+
+
+```r
+colnames(April24)
+colnames(March24)
+colnames(February24)
+colnames(January24)
+colnames(December23)
+colnames(November23)
+colnames(October23)
+colnames(September23)
+colnames(August23)
+colnames(July23)
+colnames(June23)
+colnames(May23)
+
+str(April24)
+str(March24)
+str(February24)
+str(January24)
+str(December23)
+str(November23)
+str(October23)
+str(September23)
+str(August23)
+str(July23)
+str(June23)
+str(May23)
+
+```
+
+
+
+After that, I merged the 12 months dataset
+
+
+```r
+# merging all 12 months of data
+bike_data <- rbind(April24,March24,February24,January24,December23,November23,
+                          October23,September23,August23,July23,June23,May23)
+dim(bike_data)
+
+```
+After merging the final step of cleaning is to remove the rows which has blank cell
+
+```r
+
+#cleaning the rows which have empty cells
+
+merged_bike_data <- na.omit(bike_data)
+```
+
+And my data is ready for analysis.
+# Analyze
+* Finding out the total duration and total amount of rides based on member or casual riders.
+
+```r
+# finding the total number of rider based on membership
+
+total_ride <- merged_bike_data %>% 
+  group_by(member_casual) %>% 
+  summarize(n_distinct(ride_id))
+
+view(total_ride)
+
+# Calculating average bike ride duration,minimum and maximum duration
+
+rider_mean_ride <- merged_bike_data %>% 
+  group_by(member_casual) %>% 
+  summarize(agerage_ride_duration = mean(duration_minutes),minimum_ride_duration = min(duration_minutes),
+            maximum_duration = max(duration_minutes))
+
+
+```
+* Finding out the total number of riders, duration and average time based on days of the week 
+
+
+
+```r
+#riders ride and their total and average duration during each day of the week
+
+ride_based_on_week <- merged_bike_data %>% 
+  group_by(member_casual,start_day) %>% 
+  summarize(total_riders =n(), .groups = 'drop' ,total_duration= sum(duration_minutes),
+            average_duration= mean(duration_minutes))
+view(ride_based_on_week)
+
+```
+
+
+* Finding out the total number of riders, duration and average time based on each month
+
+```r
+
+# ride number,average and total and duration based on month
+
+ride_based_on_month <- merged_bike_data %>% 
+  group_by(month,member_casual) %>% 
+  summarize(total_riders =n_distinct(ride_id) ,total_duration= sum(duration_minutes),
+            average_duration= mean(duration_minutes))
+
+View(ride_based_on_month)
+
+```
+
+
 
 
 
@@ -76,11 +184,6 @@ May23 <- read_csv("Case Study/Excel file for cleaning/May23.csv")
 
 
 ```
-
-
-
-
-
 
 
 
