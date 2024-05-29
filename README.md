@@ -38,16 +38,44 @@ In the same way, I have created another column named Month and sorted out the mo
 
 Later I need to find the duration in minutes between the starting date and time and the ending date and time of the ride. To find it I used =(E2-C2)*1440 which finds the difference between end time and start time and by multiplying with 1440 by which I were able to find exact minutes.
 
-![Adding time duration excel] (https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/minutes.png)
+![Adding time duration excel](https://github.com/omarhamza1996/Google-Capstone-Case-Study-Cyclistic-/blob/main/Screenshots/minutes.png)
 
 I did it to all 12 months of the dataset. To get a clean data I removed start_station_id,end_station_id,start_lat, and end_lat which will not be needed for my calculation.
 The only thing left to clean the data properly is to remove the data row which has missing values.
 So I moved all the data to R studio where I will conduct the rest of the analyzing process.
 I loaded all the data in R and call out tidyverse and dplyr,readr and skimr pacakage for merging and analyzing.
 
+```r
+
+library(tidyverse)
+library(dplyr)
+library(readr)
+library(skimr)
+
+April24 <- read_csv("Case Study/Excel file for cleaning/April24.csv")
+March24 <- read_csv("Case Study/Excel file for cleaning/March24.csv")
+February24 <- read_csv("Case Study/Excel file for cleaning/February24.csv")
+January24 <- read_csv("Case Study/Excel file for cleaning/January24.csv")
+December23 <- read_csv("Case Study/Excel file for cleaning/December23.csv")
+November23 <- read_csv("Case Study/Excel file for cleaning/November23.csv")
+October23 <- read_csv("Case Study/Excel file for cleaning/October23.csv")
+September23 <- read_csv("Case Study/Excel file for cleaning/September23.csv")
+August23 <- read_csv("Case Study/Excel file for cleaning/August23.csv")
+July23 <- read_csv("Case Study/Excel file for cleaning/July23.csv")
+June23 <- read_csv("Case Study/Excel file for cleaning/June23.csv")
+May23 <- read_csv("Case Study/Excel file for cleaning/May23.csv")
+
+```
 
 
 
+
+
+
+```r
+
+
+```
 
 
 
