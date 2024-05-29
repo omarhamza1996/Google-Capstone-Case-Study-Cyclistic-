@@ -1,3 +1,11 @@
+library(tidyverse)
+library(readr)
+library(janitor)
+library(skimr)
+library(ggplot2)
+library(scales)
+library(openxlsx)
+library(dplyr)
 
 
 April24 <- read_csv("Case Study/Excel file for cleaning/April24.csv")
